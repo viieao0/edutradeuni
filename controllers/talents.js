@@ -29,7 +29,6 @@ exports.getEditTalentForm = async (req, res) => {
   res.render('talents/edit', { talent });
 };
 
-// Update
 exports.updateTalent = async (req, res) => {
   const { course, description, hourlyRate } = req.body;
   await Talent.findByIdAndUpdate(req.params.id, {
