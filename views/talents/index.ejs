@@ -1,0 +1,14 @@
+<h1>All Talents</h1>
+<a href="/talents/new">Add New Talent</a>
+<ul>
+  <% talents.forEach(talent => { %>
+    <li>
+      <a href="/talents/<%= talent._id %>"><%= talent.course %></a>
+      - $<%= talent.hourlyRate %>/hr
+      <a href="/talents/<%= talent._id %>/edit">Edit</a>
+      <form action="/talents/<%= talent._id %>?_method=DELETE" method="POST" style="display:inline;">
+        <button type="submit">Delete</button>
+      </form>
+    </li>
+  <% }) %>
+</ul>

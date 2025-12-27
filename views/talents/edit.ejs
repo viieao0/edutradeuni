@@ -1,0 +1,13 @@
+<h1>Edit Talent</h1>
+<form action="/talents/<%= talent._id %>?_method=PUT" method="POST">
+  <label>Course:</label>
+  <input type="text" name="course" value="<%= talent.course %>" required>
+
+  <label>Description:</label>
+  <input type="text" name="description" value="<%= talent.description %>" required>
+
+  <label>Hourly Rate:</label>
+  <input type="number" name="hourlyRate" value="<%= talent.hourlyRate %>" required>
+
+  <button type="submit">Update</button>
+</form>
